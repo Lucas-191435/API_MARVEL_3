@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+body {
+  font-family: "Open Sans";
+  background: #f2f2f2;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container_modal {
+  display: none;
+}
+
+.container_modal.ativo {
+  display: block;
+  z-index: 200;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 90%;
+  border: 1px solid #000;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 200px;
+  animation: animaModak 0.5s forwards;
+}
+
+@keyframes animaModak {
+  from {
+    opacity: 0.8;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.container_modal > button {
+  border: none;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-weight: 900;
+  background: #e63f31;
+}
+
+.container {
+  text-align: left;
+  background: #e5e5e5;
+  max-width: 1000px;
+  margin: 64px auto;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  padding: 16px 24px;
+  border-radius: 5px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+}
+
+.imgHero {
+  position: relative;
+}
+
+.imgHero img {
+  border-radius: 5px;
+  max-width: 380px;
+  width: 100vh;
+}
+
+.imgHero > p {
+  margin: 16px;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+}
+
+.content h5 {
+  padding: 6px 16px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #e63f31;
+  border-radius: 5px;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.content .title_descriton {
+  margin-top: 32px;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+}
+
+.content > p {
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+.list {
+  margin-top: 48px;
+  display: flex;
+  background: #d9d9d9;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.list > div {
+  display: flex;
+  flex-direction: column;
+}
+.list > div > a {
+  text-decoration: none;
+  border-bottom: 1px solid #515151;
+  padding: 4px 0px 4px 12px;
+  color: #515151;
+  font-weight: 700;
+}
+
+.list > div > a:hover {
+  background: #f2f2f2;
+}
+
+.list .listContent {
+  display: none;
+  position: relative;
+}
+
+.listContent.ativo {
+  display: block;
+}
+
+.list ul {
+  width: 100%;
+  position: absolute;
+  background: #f2f2f2;
+  border: 1px solid #000;
+  border-top: none;
+}
+
+.list li {
+  padding: 4px 0px 4px 12px;
+}

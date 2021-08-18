@@ -1,0 +1,133 @@
+@import url(normalize.css);
+@import url(reset.css);
+@import url(modal.css);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+body {
+  text-align: center;
+  font-family: "Open Sans";
+  background: #f2f2f2;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(wallpaper.svg);
+  transition: 0.5s;
+}
+
+body > h1 {
+  margin: 0 auto;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  padding: 8px 0;
+  width: 520px;
+  height: auto;
+  font-size: 32px;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #f2f2f2;
+  color: #e63f31;
+}
+
+.btn_back,
+.btn_next {
+  cursor: pointer;
+  margin: 0 12px;
+  padding: 14px 45px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  background: #3a7fc4;
+}
+
+.btn_back:hover,
+.btn_next:hover {
+  background: #3252c2;
+}
+
+.btns_bottom {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.container_cards {
+  margin: 0 auto;
+  margin-top: 16px;
+  max-width: 1000px;
+  row-gap: 32px;
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .container_cards {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container_cards {
+    grid-template-columns: auto;
+  }
+}
+
+.content_card {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  height: 320px;
+  width: 280px;
+  background-size: 120%;
+  background-position: top;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  animation: animaCard 0.5s forwards;
+}
+
+@keyframes animaCard {
+  from {
+    opacity: 0.8;
+    /* transform: translate3d(-30px, 0, 0); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translate3d(0, 0, 0); */
+  }
+}
+
+.card {
+  background: #f2f2f2;
+  padding: 16px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.content_card:hover {
+  cursor: pointer;
+  background-size: 130%;
+}
+
+.card p,
+.card h5 {
+  position: absolute;
+}
+
+.card p {
+  top: 0;
+}
+
+.card h5 {
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+  margin: 0;
+  /* height: 50px; */
+  width: 100%;
+  background: #e63f31;
+  bottom: 0;
+  padding: 8px 12px;
+}
