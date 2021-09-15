@@ -21,7 +21,7 @@ export default function requition(num) {
     desabledBtn(2);
   }
   console.log(num_offSet);
-  const f = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${pK}&hash=${md5}&limit=6&offset=${num_offSet}`;
+  const f = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${pK}&hash=${md5}&limit=6&offset=${num_offSet}`;
 
   fetch(f)
     .then((result) => {

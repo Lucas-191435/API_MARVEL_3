@@ -4,18 +4,18 @@ export default function initModal(id_Hero) {
   const md5 = "09c586d3b7b17163a0c283bbe84e4ee5";
 
   const idHero = id_Hero.replace("#", "");
-  console.log(idHero);
+  // console.log(idHero);
 
   const f = `http://gateway.marvel.com/v1/public/characters/${idHero}?ts=${timeStemp}&apikey=${apiKey}&hash=${md5}`;
 
-  console.log(f);
+  // console.log(f);
 
   fetch(f)
     .then((response) => {
       return response.json();
     })
     .then((jsonParsed) => {
-      console.log(jsonParsed);
+      // console.log(jsonParsed);
       jsonParsed.data.results.forEach((item, index) => {
         const srcImgHero = item.thumbnail.path + "." + item.thumbnail.extension;
         const nameHero = item.name;
@@ -105,9 +105,16 @@ export default function initModal(id_Hero) {
         });
 
         container_modal.classList.add("ativo");
+
+        if (container_modal.classList.contains("ativo")) {
+          document.querySelector("body").style.overflow = "hidden";
+          container_modal.style.top = window.pageYOffset + "px";
+          container_modal.style.overflow = "auto";
+        }
         const btn_close_modal = container_modal.getElementsByTagName("button");
         btn_close_modal[0].addEventListener("click", () => {
           container_modal.classList.remove("ativo");
+          document.querySelector("body").style.overflow = "auto";
         });
       }
 
