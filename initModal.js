@@ -6,7 +6,7 @@ export default function initModal(id_Hero) {
   const idHero = id_Hero.replace("#", "");
   // console.log(idHero);
 
-  const f = `http://gateway.marvel.com/v1/public/characters/${idHero}?ts=${timeStemp}&apikey=${apiKey}&hash=${md5}`;
+  const f = `https://gateway.marvel.com/v1/public/characters/${idHero}?ts=${timeStemp}&apikey=${apiKey}&hash=${md5}`;
 
   // console.log(f);
 
